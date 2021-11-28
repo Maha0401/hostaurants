@@ -44,10 +44,10 @@ class Dashboard extends React.Component {
             (
                 <div className="dashboard">
                     <h1>
-                        Dashboard
+                        Hostaurants
                     </h1>
 
-                    <h2>Welcome! {userInfo.name}</h2>
+                    <h2>Welcome! {userInfo.username}</h2>
 
                     <button onClick={this.handleLogOut}>Log Out</button>
                 </div>
