@@ -2,6 +2,8 @@ import axios from 'axios';
 import React from 'react'
 import {Link} from 'react-router-dom';
 import Input from '../../components/Input/Input';
+import Logo from '../../assets/logo/logo.png'
+import './LogIn.scss'
 
 function LogIn(props) {
 
@@ -35,18 +37,27 @@ function LogIn(props) {
 
     return (
         <div className="login">
-            <h1>Log In</h1>
-            <form onSubmit={handleLogIn}>
-                <Input label="Username" name="username" type="text" />
-                <Input label="Password" name="password" type="password" />
-                <button type="submit">Log In</button>
-            </form>
-            <form onSubmit={handleChefLogIn}>
-                <Input label="Username" name="chefUsername" type="text" />
-                <Input label="Password" name="chefPassword" type="password" />
-                <button type="submit">Log In</button>
-            </form>
-            <Link to="/signup">Sign Up</Link>
+            <img className='login__logo' src={Logo} alt='Hostaurants logo'></img>
+            <div className="login__forms">
+                <div className="login__user">
+                    <h1>Log In</h1>
+                    <form onSubmit={handleLogIn}>
+                        <Input label="Username" name="username" type="text" />
+                        <Input label="Password" name="password" type="password" />
+                        <button className='login__button' type="submit">Log In</button>
+                    </form>
+                </div>
+                <div className="login__chef">
+                    <h1>Chef Log In</h1>
+                    <form onSubmit={handleChefLogIn}>
+                        <Input label="Username" name="chefUsername" type="text" />
+                        <Input label="Password" name="chefPassword" type="password" />
+                        <button className='login__button' type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+            <h3 className='login__signup-text'>Dont have an account yet? Please signup...</h3>
+            <Link className='login__button login__button--signup' to="/signup">Sign Up</Link>
         </div>
     )
 }

@@ -1,6 +1,14 @@
 .cheflist{
     font-family: CaveatBrush;
     margin: 0 4rem;
+    &__chef{
+        cursor: pointer;
+        &:hover{
+            position: relative;
+            top: 1rem;
+            left: 1rem;
+        }
+    }
     &__row{
         display: flex;
         flex-direction: row;

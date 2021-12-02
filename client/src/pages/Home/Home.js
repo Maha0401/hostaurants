@@ -23,6 +23,26 @@ class Home extends React.Component {
         });
     };
 
+    handleCuisineClick = (cuisine) =>{
+        axios
+            .get(`http://localhost:8080/food/cuisine/${cuisine}`)
+            .then((response) => {
+            this.setState({
+                errorLoading: false,
+                foods: response.data,
+            });
+            window.scrollTo({
+                top: 3000,
+                behavior: "smooth" 
+                });
+            })
+            .catch((error) => {
+            this.setState({
+                errorLoading: true,
+            });
+            });
+    }
+
     getSearchFood = (query) => {
         if(!query){
             this.setState({
@@ -31,20 +51,20 @@ class Home extends React.Component {
             })
             return ;
         }
-    axios
-        .get(`http://localhost:8080/food/search/${query}`)
-        .then((response) => {
-        this.setState({
-            errorLoading: false,
-            query: query,
-            foods: response.data,
-        });
-        })
-        .catch((error) => {
-        this.setState({
-            errorLoading: true,
-        });
-        });
+        axios
+            .get(`http://localhost:8080/food/search/${query}`)
+            .then((response) => {
+            this.setState({
+                errorLoading: false,
+                query: query,
+                foods: response.data,
+            });
+            })
+            .catch((error) => {
+            this.setState({
+                errorLoading: true,
+            });
+            });
     };
 
     componentDidMount() {
@@ -96,7 +116,8 @@ class Home extends React.Component {
             (
                 <div className="home">
                     <Header handleLogOut={this.handleLogOut} username={userInfo.username}/>
-                    <Cuisines />
+                    <Cuisines 
+                        handleCuisineClick={this.handleCuisineClick}/>
                     <ChefList />
                     <SearchBox 
                         handleQueryChange= {this.handleQueryChange}

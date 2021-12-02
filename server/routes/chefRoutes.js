@@ -14,7 +14,6 @@ knex('chef')
 );
 
 router.get('/current', authorize, (req, res) => {
-    console.log("req.decoded in /users/current route", req.decoded);
     // if valid token, continue
     const usernameFromToken = req.decoded.username;
     // find the user from users using username from the token
