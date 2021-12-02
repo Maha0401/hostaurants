@@ -14,7 +14,6 @@ knex('user')
 );
 
 router.get('/current', authorize, (req, res) => {
-    console.log("req.decoded in /users/current route", req.decoded);
     // if valid token, continue
     const usernameFromToken = req.decoded.username;
     // find the user from users using username from the token
@@ -66,8 +65,6 @@ router.post('/login', (req, res) => {
         { username: username },
         // 2. secret key
         process.env.JWT_SECRET_KEY,
-        // 3. options
-        //{ expiresIn: "1h" }
     );
 
     res.json({ 

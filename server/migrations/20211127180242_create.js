@@ -16,6 +16,7 @@ exports.up = function(knex) {
         table.string('pic1');
         table.string('pic2');
         table.string('pic3');
+        table.string('pic4');
         table.timestamp('updated_at').defaultTo(knex.fn.now());
     })
     .createTable('food', (table) => {

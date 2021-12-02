@@ -1,25 +1,24 @@
 import axios from 'axios';
 import React from 'react'
 
-class Dashboard extends React.Component {
+class ChefHome extends React.Component {
     state = {
         isLoading: true,
-        userInfo: {}
+        chefInfo: {}
     }
 
     componentDidMount() {
         let token = sessionStorage.getItem('authToken')
 
         if (!!token) {
-            axios.get('http://localhost:8080/users/current', {
+            axios.get('http://localhost:8080/chef/current', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             })
             .then(res => {
-                console.log(res)
                 this.setState({
-                    userInfo: res.data,
+                    chefInfo: res.data,
                     isLoading: false
                 })
             })
@@ -37,7 +36,7 @@ class Dashboard extends React.Component {
     }
 
     render() {
-        const { isLoading, userInfo } = this.state
+        const { isLoading, chefInfo } = this.state
         return isLoading ? 
             <h1>Loading...</h1> 
         :
@@ -47,7 +46,7 @@ class Dashboard extends React.Component {
                         Hostaurants
                     </h1>
 
-                    <h2>Welcome! {userInfo.username}</h2>
+                    <h2>Welcome! {chefInfo.username}</h2>
 
                     <button onClick={this.handleLogOut}>Log Out</button>
                 </div>
@@ -55,4 +54,4 @@ class Dashboard extends React.Component {
     }
 }
 
-export default Dashboard;
+export default ChefHome;

@@ -13,10 +13,10 @@ const userRoutes = require('./routes/userRoutes');
 app.use('/users', userRoutes);
 
 const chefRoutes = require('./routes/chefRoutes');
-app.use('/api/chef', chefRoutes);
+app.use('/chef', chefRoutes);
 
 const foodRoutes = require('./routes/foodRoutes');
-app.use('/api/food', foodRoutes);
+app.use('/food', foodRoutes);
 
 app.listen(PORT, ()=> {
     console.log(`running at http://localhost:${PORT}`);

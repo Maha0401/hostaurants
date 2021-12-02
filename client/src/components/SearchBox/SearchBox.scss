@@ -1,0 +1,15 @@
+.search{
+    font-family: CaveatBrush;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    &__text{
+        border-radius: 5rem;
+        padding-left: 2rem;
+        height:2rem;
+        width:15rem;
+    }
+    &__header{
+        margin-left:1.5rem;
+    }
+}

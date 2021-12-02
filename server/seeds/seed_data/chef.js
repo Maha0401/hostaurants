@@ -7,7 +7,8 @@ module.exports = [
         about: 'about me',
         pic1: '',
         pic2: '',
-        pic3: ''
+        pic3: '',
+        pic4: ''
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ module.exports = [
         about: 'about me',
         pic1: '',
         pic2: '',
-        pic3: ''
+        pic3: '',
+        pic4: ''
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ module.exports = [
         about: 'about me',
         pic1: '',
         pic2: '',
-        pic3: ''
+        pic3: '',
+        pic4: ''
     },
     {
         id: 4,
@@ -37,6 +40,7 @@ module.exports = [
         about: 'about me',
         pic1: '',
         pic2: '',
-        pic3: ''
+        pic3: '',
+        pic4: ''
     },
   ];
