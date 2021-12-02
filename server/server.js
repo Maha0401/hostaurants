@@ -4,8 +4,8 @@ const knex = require('knex')(require('./knexfile').development);
 require('dotenv').config();
 const PORT = process.env.PORT || 9000;
 const cors = require('cors')
-app.use(cors());
- 
+
+app.use(cors()); 
 app.use(express.json())
 app.use(express.static('public'))
 

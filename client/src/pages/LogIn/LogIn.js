@@ -7,17 +7,12 @@ function LogIn(props) {
 
     const handleLogIn = (e) => {
         e.preventDefault();
-        console.log({
-            username: e.target.username.value,
-            password: e.target.password.value
-        })
 
         axios.post('http://localhost:8080/users/login', {
             username: e.target.username.value,
             password: e.target.password.value
         })
         .then(res => {
-            console.log(res)
             let token = res.data.token
             sessionStorage.setItem('authToken', token)
             props.history.push('/')

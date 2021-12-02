@@ -13,39 +13,39 @@ function ChefList() {
     return (
         <div className='cheflist'>
         <h2 className='cheflist__header'>Chef near you</h2>
-        <div class="cheflist__list">
-            <div class="cheflist__row">
-                <div class="cheflist__chef">
+        <div className="cheflist__list">
+            <div className="cheflist__row">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef1} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Felix</h4>
                 </div>
-                <div class="cheflist__chef">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef2} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Thessa</h4>
                 </div>
-                <div class="cheflist__chef">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef3} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Nadia</h4>
                 </div>
-                <div class="cheflist__chef">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef4} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Bob</h4>
                 </div>
             </div>
-            <div class="cheflist__row">
-                <div class="cheflist__chef">
+            <div className="cheflist__row">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef5} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Jay</h4>
                 </div>
-                <div class="cheflist__chef">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef6} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Ruffles</h4>
                 </div>
-                <div class="cheflist__chef">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef7} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef kamarjit</h4>
                 </div>
-                <div class="cheflist__chef">
+                <div className="cheflist__chef">
                     <img className='cheflist__image' src={chef8} alt='chef_avatar'></img>
                     <h4 className='cheflist__name'>Chef Puttin</h4>
                 </div>
