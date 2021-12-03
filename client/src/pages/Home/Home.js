@@ -23,6 +23,12 @@ class Home extends React.Component {
         });
     };
 
+    handleLogOut = (e) => {
+        e.preventDefault();
+        sessionStorage.removeItem('authToken')
+        this.props.history.push('/login')
+    };
+
     handleCuisineClick = (cuisine) =>{
         axios
             .get(`http://localhost:8080/food/cuisine/${cuisine}`)
@@ -69,11 +75,6 @@ class Home extends React.Component {
 
     componentDidMount() {
         let token = sessionStorage.getItem('authToken')
-        // const query = this.state.query;
-
-        // if (query) {
-        //   this.getSearchFood(query);
-        // }
 
         if (!!token) {
             axios.get('http://localhost:8080/users/current', {
@@ -102,10 +103,8 @@ class Home extends React.Component {
         }
       }
 
-    handleLogOut = (e) => {
-        e.preventDefault();
-        sessionStorage.removeItem('authToken')
-        this.props.history.push('/login')
+    requestButtonHandle = () => {
+        this.props.history.push('/request')
     }
 
     render() {
@@ -115,14 +114,15 @@ class Home extends React.Component {
         :
             (
                 <div className="home">
-                    <Header handleLogOut={this.handleLogOut} username={userInfo.username}/>
+                    <Header username={userInfo.username} handleLogOut={this.handleLogOut}/>
                     <Cuisines 
                         handleCuisineClick={this.handleCuisineClick}/>
                     <ChefList />
                     <SearchBox 
                         handleQueryChange= {this.handleQueryChange}
                         query={this.state.query}/>
-                    <RequestButton />
+                    <RequestButton 
+                        requestButtonHandle= {this.requestButtonHandle}/>
                     <FoodList 
                         foods={this.state.foods}/>
                 </div>

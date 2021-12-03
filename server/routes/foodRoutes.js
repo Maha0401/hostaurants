@@ -1,5 +1,10 @@
 const router = require("express").Router();
 const knex = require('knex')(require('../knexfile').development);
+const { v4: uuidv4 } = require('uuid');
+const fs = require('fs');
+
+let foodRequestList = fs.readFileSync('./data/request.json');
+foodRequestList = JSON.parse(foodRequestList);
 
 let foodList = []
 
@@ -13,6 +18,27 @@ knex("food")
 router.route("/")
     .get((req,res) =>{
         res.json(foodList);
+    })
+    .post((req,res)=> {
+        const { name, description, username } =req.body;
+
+        if(name.trim()===""){
+            return res
+                    .status(404)
+                    .json(`Please enter title and description in request body`)
+        }
+
+        foodRequestList.push({
+            id: uuidv4(),
+            name,
+            description,
+            username,
+            chefname: ''
+        })
+        fs.writeFileSync('./data/request.json', JSON.stringify(foodRequestList));
+        res
+            .status(201)
+            .json(foodRequestList);
     });
 
 router.route("/search/:searchquery").get((req,res)=>{
