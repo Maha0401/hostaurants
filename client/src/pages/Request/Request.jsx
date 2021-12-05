@@ -9,10 +9,11 @@ class Request extends React.Component {
         userInfo: {},
         isLoading: true,
     }
+
     handleRequestSubmit = (e) => {
         e.preventDefault()
         axios
-        .post(`http://localhost:8080/food/`
+        .post(`http://localhost:8080/food/request`
             , {
             "name": e.target.name.value,
             "description": e.target.description.value,
@@ -33,12 +34,6 @@ class Request extends React.Component {
     handleCancel = () =>{
         this.props.history.push('/')
     }
-
-    handleLogOut = (e) => {
-        e.preventDefault();
-        sessionStorage.removeItem('authToken')
-        this.props.history.push('/login')
-    };
 
     componentDidMount() {
         let token = sessionStorage.getItem('authToken')
@@ -66,7 +61,7 @@ class Request extends React.Component {
         :
         (
             <div>
-                <Header username={this.state.userInfo.username} handleLogOut={this.handleLogOut}/>
+                <Header username={this.state.userInfo.username}/>
                 <form className="requestform" onSubmit={this.handleRequestSubmit}>
                     <div className="requestform__input">
                         <label className="requestform__label" htmlFor='name'>Food Name</label>

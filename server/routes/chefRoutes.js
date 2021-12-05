@@ -31,6 +31,10 @@ router.get('/current', authorize, (req, res) => {
     })
 });
 
+router.get('/:id', (req, res) => {
+    knex('chef').where('id', req.params.id).then((response) => res.send(response))
+})
+
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
 

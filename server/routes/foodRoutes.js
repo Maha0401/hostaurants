@@ -6,6 +6,9 @@ const fs = require('fs');
 let foodRequestList = fs.readFileSync('./data/request.json');
 foodRequestList = JSON.parse(foodRequestList);
 
+let foodBookingList = fs.readFileSync('./data/book.json');
+foodBookingList = JSON.parse(foodBookingList);
+
 let foodList = []
 
 knex("food")
@@ -19,6 +22,26 @@ router.route("/")
     .get((req,res) =>{
         res.json(foodList);
     })
+
+router.route('/book')
+    .post((req,res)=> {
+        const { foodId, chefId, date, message, clientName } =req.body;
+
+        foodBookingList.push({
+            id: uuidv4(),
+            foodId,
+            chefId,
+            date,
+            message,
+            clientName
+        })
+        fs.writeFileSync('./data/book.json', JSON.stringify(foodBookingList));
+        res
+            .status(201)
+            .json(foodBookingList);
+    });
+
+    router.route('/request')
     .post((req,res)=> {
         const { name, description, username } =req.body;
 
@@ -45,6 +68,10 @@ router.route("/search/:searchquery").get((req,res)=>{
     let filteredFood = foodList.filter(food=> food.name.toLowerCase().includes(req.params.searchquery))
     res.json(filteredFood);
 });
+
+router.get('/:id', (req, res) => {
+    knex('food').where('id', req.params.id).then((response) => res.send(response))
+})
 
 router.route("/cuisine/:searchquery").get((req,res)=>{
     let filteredFood = foodList.filter(food=> food.cuisine.toLowerCase().includes(req.params.searchquery))

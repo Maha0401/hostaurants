@@ -23,12 +23,6 @@ class Home extends React.Component {
         });
     };
 
-    handleLogOut = (e) => {
-        e.preventDefault();
-        sessionStorage.removeItem('authToken')
-        this.props.history.push('/login')
-    };
-
     handleCuisineClick = (cuisine) =>{
         axios
             .get(`http://localhost:8080/food/cuisine/${cuisine}`)
@@ -107,6 +101,10 @@ class Home extends React.Component {
         this.props.history.push('/request')
     }
 
+    foodClickHandle = (foodId,chefId) => {
+        this.props.history.push(`/book/${foodId}/${chefId}`)
+    }
+
     render() {
         const { isLoading, userInfo } = this.state
         return isLoading ? 
@@ -114,7 +112,7 @@ class Home extends React.Component {
         :
             (
                 <div className="home">
-                    <Header username={userInfo.username} handleLogOut={this.handleLogOut}/>
+                    <Header username={userInfo.username}/>
                     <Cuisines 
                         handleCuisineClick={this.handleCuisineClick}/>
                     <ChefList />
@@ -124,7 +122,8 @@ class Home extends React.Component {
                     <RequestButton 
                         requestButtonHandle= {this.requestButtonHandle}/>
                     <FoodList 
-                        foods={this.state.foods}/>
+                        foods={this.state.foods}
+                        foodClickHandle={this.foodClickHandle}/>
                 </div>
             )
     }

@@ -1,0 +1,124 @@
+.booking{
+    
+    &__popup{
+        display:none;
+    }
+    &__popup--show{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(219, 223, 235, 0.7);
+    }
+    &__popup-content{
+        position: relative;
+        top:15vw;
+        left:45vw;
+    }
+    &__successful{
+        font-size: 2rem;
+        font-family: 'CaveatBrush';
+    }
+    &__calender{
+        border-radius: 1rem;
+        font-family: 'CaveatBrush';
+        max-height: 20rem;
+    }
+    &__time{
+        font-family: 'CaveatBrush';
+        border-radius: .5rem;
+        width: 31.5vw;
+        margin-bottom: 1rem;
+        height: 4rem;
+    }
+    &__form{
+        display: flex;
+        justify-content: space-around;
+        margin: 0 4rem;
+        margin-top:3rem
+    }
+    &__time-message-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    &__message-txtbox{
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        font-size: inherit;
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'CaveatBrush';
+        height:5rem;
+        border: 1px solid #5d5d5d;
+    }
+    &__button{
+        width: 10vw;
+        margin-top: 2rem;
+        max-height: 2rem;
+        min-width: 8rem;
+        border-radius: 5rem;
+        font-family: 'CaveatBrush';
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        background: linear-gradient(0deg, #f0f07b 50%, #e77d7d 50%,);
+    }
+    &__message-label{
+        font-family: 'CaveatBrush';
+    }
+    &__button--book{
+        width: 20vw;
+        margin-left:1.5rem;
+    }
+    &__time-message-buttons{
+        margin-left: -5rem;
+    }
+    &__okay-button{
+        width: 10vw;
+        margin-top: 2rem;
+        max-height: 2rem;
+        min-width: 8rem;
+        border-radius: 5rem;
+        font-family: 'CaveatBrush';
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        background: linear-gradient(0deg, #f0f07b 50%, #e77d7d 50%,);
+    }
+}
+
+.currentfood{
+    &__image{
+        width:10rem;
+        height:10rem;
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: .5rem .5rem .25rem #aaaaaa;
+    }
+    &__description{
+        width:10rem;
+    }
+    &__header{
+        margin-top:0;
+    }
+}
+
+.currentchef{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    &__image{
+        width:10rem;
+        height:10rem;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: .5rem .5rem .25rem #aaaaaa;
+    }
+    &__header{
+        margin-top:4rem;
+        margin-left:2rem;
+    }
+}
