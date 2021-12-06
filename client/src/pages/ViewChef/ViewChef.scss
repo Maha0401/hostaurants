@@ -1,0 +1,30 @@
+.currentchef{
+    margin-top:2rem;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 7rem;
+    &__image{
+        width:10rem;
+        height:10rem;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: .5rem .5rem .25rem #aaaaaa;
+    }
+    &__header{
+        margin-top:1rem;
+        margin-left:2rem;
+    }
+    &__img-name{
+        display: flex;
+        flex-direction: column;
+    }
+    &__about{
+        width: 40vw;
+    }
+    &__about-container{
+        display: flex;
+        flex-direction: column;
+    }
+}

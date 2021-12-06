@@ -103,6 +103,14 @@ class Home extends React.Component {
 
     foodClickHandle = (foodId,chefId) => {
         this.props.history.push(`/book/${foodId}/${chefId}`)
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" 
+          })
+    }
+
+    clickChefHandle = (id) => {
+        this.props.history.push(`/viewchef/${id}`)
     }
 
     render() {
@@ -115,7 +123,8 @@ class Home extends React.Component {
                     <Header username={userInfo.username}/>
                     <Cuisines 
                         handleCuisineClick={this.handleCuisineClick}/>
-                    <ChefList />
+                    <ChefList 
+                        clickChefHandle={this.clickChefHandle}/>
                     <SearchBox 
                         handleQueryChange= {this.handleQueryChange}
                         query={this.state.query}/>

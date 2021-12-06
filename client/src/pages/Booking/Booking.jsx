@@ -78,9 +78,9 @@ class Booking extends React.Component {
         return (
             <div className='booking'>
             <Header username={this.state.userInfo.username}/>
-            <div className='currentchef'>
-                <img className='currentchef__image' src={`http://localhost:8080/${this.state.currentChef.pic}`} alt={`${this.state.currentChef.name} poster`}></img>
-                <h2 className='currentchef__header'>Presented by Chef {this.state.currentChef.name} <a href = '/'>`[Check Out my page]`</a></h2>        
+            <div className='bookcurrentchef'>
+                <img className='bookcurrentchef__image' src={`http://localhost:8080/${this.state.currentChef.pic}`} alt={`${this.state.currentChef.name} poster`}></img>
+                <h2 className='bookcurrentchef__header'>Presented by Chef {this.state.currentChef.name} <a className='bookcurrentchef__link' href = {`/viewchef/${this.state.currentChef.id}`}>[Check Out my page here]</a></h2>        
             </div>
                 <form onSubmit={this.OnBookHandle} className='booking__form'> 
                 <div className='currentfood'>

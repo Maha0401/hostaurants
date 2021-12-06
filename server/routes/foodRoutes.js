@@ -73,6 +73,10 @@ router.get('/:id', (req, res) => {
     knex('food').where('id', req.params.id).then((response) => res.send(response))
 })
 
+router.get('/chef/:chefId', (req, res) => {
+    knex('food').where('ichefId', req.params.chefId).then((response) => res.send(response))
+})
+
 router.route("/cuisine/:searchquery").get((req,res)=>{
     let filteredFood = foodList.filter(food=> food.cuisine.toLowerCase().includes(req.params.searchquery))
     res.json(filteredFood);

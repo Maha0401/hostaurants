@@ -9,50 +9,53 @@ import chef7 from '../../assets/images/7.jpg'
 import chef8 from '../../assets/images/8.jpg'
 import './ChefList.scss'
 
-function ChefList() {
-    return (
-        <div className='cheflist'>
-        <h2 className='cheflist__header'>Chef near you</h2>
-        <div className="cheflist__list">
-            <div className="cheflist__row">
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef1} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Felix</h4>
+class ChefList extends React.Component {
+
+    render() {
+        return (
+            <div className='cheflist'>
+            <h2 className='cheflist__header'>Chef near you</h2>
+            <div className="cheflist__list">
+                <div className="cheflist__row">
+                    <div onClick={() => this.props.clickChefHandle(1)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef1} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Felix</h4>
+                    </div>
+                    <div onClick={() => this.props.clickChefHandle(2)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef2} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Thessa</h4>
+                    </div>
+                    <div onClick={() => this.props.clickChefHandle(3)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef3} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Nadia</h4>
+                    </div>
+                    <div onClick={() => this.props.clickChefHandle(4)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef4} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Bob</h4>
+                    </div>
                 </div>
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef2} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Thessa</h4>
-                </div>
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef3} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Nadia</h4>
-                </div>
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef4} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Bob</h4>
-                </div>
+                <div className="cheflist__row">
+                    <div onClick={() => this.props.clickChefHandle(5)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef5} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Jay</h4>
+                    </div>
+                    <div onClick={() => this.props.clickChefHandle(6)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef6} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Ruffles</h4>
+                    </div>
+                    <div onClick={() => this.props.clickChefHandle(7)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef7} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef kamarjit</h4>
+                    </div>
+                    <div onClick={() => this.props.clickChefHandle(8)} className="cheflist__chef">
+                        <img className='cheflist__image' src={chef8} alt='chef_avatar'></img>
+                        <h4 className='cheflist__name'>Chef Puttin</h4>
+                    </div>
+                </div>   
             </div>
-            <div className="cheflist__row">
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef5} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Jay</h4>
-                </div>
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef6} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Ruffles</h4>
-                </div>
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef7} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef kamarjit</h4>
-                </div>
-                <div className="cheflist__chef">
-                    <img className='cheflist__image' src={chef8} alt='chef_avatar'></img>
-                    <h4 className='cheflist__name'>Chef Puttin</h4>
-                </div>
-            </div>   
-        </div>
-        </div>
-    )
+            </div>
+        )
+    }
 }
 
 export default ChefList
