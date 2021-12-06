@@ -110,7 +110,7 @@ class Home extends React.Component {
     }
 
     clickChefHandle = (id) => {
-        this.props.history.push(`/viewchef/${id}`)
+        this.props.history.push(`/viewchef/about/${id}`)
     }
 
     render() {

@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from 'axios'
+import './ViewChefAbout.scss'
 import Header from '../../components/Header/Header'
-import './ViewChef.scss'
 import UserChefHeader from '../../components/UserChefHeader/UserChefHeader'
 
-class ViewChef extends React.Component {
+class ViewChefAbout extends React.Component {
     state={
         userInfo: {},
         isLoading: true,
@@ -58,4 +58,4 @@ class ViewChef extends React.Component {
     }
 }
 
-export default ViewChef
+export default ViewChefAbout
