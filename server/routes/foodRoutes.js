@@ -74,7 +74,7 @@ router.get('/:id', (req, res) => {
 })
 
 router.get('/chef/:chefId', (req, res) => {
-    knex('food').where('ichefId', req.params.chefId).then((response) => res.send(response))
+    knex('food').where('chefId', req.params.chefId).then((response) => res.send(response))
 })
 
 router.route("/cuisine/:searchquery").get((req,res)=>{

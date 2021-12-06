@@ -18,6 +18,9 @@
         font-size: 1.5rem;
         padding-bottom: 2rem;
         background: linear-gradient(0deg, #f4a11c 50%, #c7363b 50%,);
+        &:hover{
+            background: #f4a11c;
+        }
     }
 
 }

@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React from 'react'
+import Header from '../../components/Header/Header';
+import ChefHeader from '../../components/ChefHeader/ChefHeader';
 
 class ChefHome extends React.Component {
     state = {
         isLoading: true,
-        chefInfo: {}
+        chefInfo: {},
+        currentChef: {}
     }
 
     componentDidMount() {
@@ -42,13 +45,8 @@ class ChefHome extends React.Component {
         :
             (
                 <div className="dashboard">
-                    <h1>
-                        Hostaurants
-                    </h1>
-
-                    <h2>Welcome! {chefInfo.username}</h2>
-
-                    <button onClick={this.handleLogOut}>Log Out</button>
+                    <Header username={chefInfo.username} />
+                    <ChefHeader currentChef={chefInfo.username} />
                 </div>
             )
     }

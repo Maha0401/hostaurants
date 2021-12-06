@@ -15,5 +15,8 @@
         background: linear-gradient(0deg, #f4a11c 50%, #c7363b 50%,);
         font-family: 'CaveatBrush';
         font-size: 1.5rem;
+        &:hover{
+            background: #f4a11c;
+        }
     }
 }

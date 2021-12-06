@@ -8,7 +8,8 @@ class ViewChefMenu extends React.Component {
     state={
         userInfo: {},
         isLoading: true,
-        currentChef: {}
+        currentChef: {},
+        foods: []
     }
 
     componentDidMount() {
@@ -35,6 +36,28 @@ class ViewChefMenu extends React.Component {
         .then((response) => {
             this.setState({currentChef: response.data[0]})
         })
+
+        axios
+            .get(`http://localhost:8080/food/chef/${this.props.match.params.chefId}`)
+            .then((response) => {
+            this.setState({
+                foods: response.data,
+            });
+            })
+            .then(()=>{})
+            .catch((error) => {
+            this.setState({
+                errorLoading: true,
+            });
+            });
+    }
+
+    foodClickHandle = (foodId,chefId) => {
+        this.props.history.push(`/book/${foodId}/${chefId}`)
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" 
+          })
     }
 
     render() {
@@ -45,6 +68,17 @@ class ViewChefMenu extends React.Component {
             <div>
                 <Header username={this.state.userInfo.username}/>
                 <UserChefHeader currentChef={this.state.currentChef}/>
+                <div className='chef-foodlist'>
+                {!this.state.foods[0]?<div></div>:
+                    this.state.foods.map(food => {
+                    return(
+                        <div onClick={() => this.foodClickHandle(food.id,food.chefId)} className='chef-foodlist__food' key = {food.id}>
+                            <h2 className='chef-foodlist__header'>{food.name}</h2>
+                            <img className='chef-foodlist__image' src={`http://localhost:8080/${food.pic}`} alt={`${food.name} poster`}></img>
+                        </div>
+                        )}
+                )}        
+                </div>
             </div>
         )
     }
