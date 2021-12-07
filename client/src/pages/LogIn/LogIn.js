@@ -17,7 +17,7 @@ function LogIn(props) {
         .then(res => {
             let token = res.data.token
             sessionStorage.setItem('authToken', token)
-            props.history.push('/')
+            props.history.push(`/`)
         })
     }
 
@@ -31,7 +31,7 @@ function LogIn(props) {
         .then(res => {
             let token = res.data.token
             sessionStorage.setItem('authToken', token)
-            props.history.push('/chef')
+            props.history.push(`/chef/${res.data.id}`)
         })
     }
 

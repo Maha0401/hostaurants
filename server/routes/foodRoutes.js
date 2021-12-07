@@ -25,11 +25,12 @@ router.route("/")
 
 router.route('/book')
     .post((req,res)=> {
-        const { foodId, chefId, date, message, clientName } =req.body;
+        const { foodId, chefId, date, message, clientName, foodName } =req.body;
 
         foodBookingList.push({
             id: uuidv4(),
             foodId,
+            foodName,
             chefId,
             date,
             message,

@@ -55,21 +55,28 @@ class Booking extends React.Component {
         this.setState({display:''})
     }
 
-    handleInput = value => this.setState({InputValue: value})
+    handleInput = value => {
+        console.log(value.toString().slice(0,15))
+        this.setState({InputValue: value.toString().slice(0,15)})}
 
     OnBookHandle = (e) => {
         e.preventDefault();
+
+        //axios.get(`http://localhost:8080/food/${food.foodId}`).then((res)=>{}
+
         axios
         .post(`http://localhost:8080/food/book`
             , {
                 "foodId": this.props.match.params.foodId,
+                "foodName": this.state.currentFood.name,
                 "chefId": this.props.match.params.chefId,
-                "date": this.state.inputValue.toString().slice(0,15),
+                "date": this.state.InputValue,
                 "message": e.target.message.value,
                 "clientName": this.state.userInfo.username
             }
         )
         .then((res) => {
+            console.log(this.state.inputValue)
             this.setState({display:'booking__popup--show'})
         })    
     }
@@ -80,7 +87,7 @@ class Booking extends React.Component {
             <Header username={this.state.userInfo.username}/>
             <div className='bookcurrentchef'>
                 <img className='bookcurrentchef__image' src={`http://localhost:8080/${this.state.currentChef.pic}`} alt={`${this.state.currentChef.name} poster`}></img>
-                <h2 className='bookcurrentchef__header'>Presented by Chef {this.state.currentChef.name} <a className='bookcurrentchef__link' href = {`/viewchef/${this.state.currentChef.id}`}>[Check Out my page here]</a></h2>        
+                <h2 className='bookcurrentchef__header'>Presented by Chef {this.state.currentChef.name} <a className='bookcurrentchef__link' href = {`/viewchef/about/${this.state.currentChef.id}`}>[Check Out my page here]</a></h2>        
             </div>
                 <form onSubmit={this.OnBookHandle} className='booking__form'> 
                 <div className='currentfood'>

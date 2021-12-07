@@ -8,6 +8,9 @@ import Booking from './pages/Booking/Booking';
 import ViewChefMenu from './pages/ViewChefMenu/ViewChefMenu';
 import ViewChefGallery from './pages/ViewChefGallery/ViewChefGallery';
 import ViewChefAbout from './pages/ViewChefAbout/ViewChefAbout'
+import ChefAbout from './pages/ChefAbout/ChefAbout';
+import ChefMenu from './pages/ChefMenu/ChefMenu';
+import ChefGallery from './pages/ChefGallery/ChefGallery';
 
 function App() {
   return (
@@ -24,10 +27,10 @@ function App() {
                     <Route path="/viewchef/menu/:chefId" exact component={ViewChefMenu} />
                     <Route path="/viewchef/gallery/:chefId" exact component={ViewChefGallery} />
 
-                    <Route path="/chef" exact component={ChefHome} />
-                    <Route path="/chef/about" exact component={ChefHome} />
-                    <Route path="/chef/menu" exact component={ChefHome} />
-                    <Route path="/chef/gallery" exact component={ChefHome} />
+                    <Route path="/chef/:chefId" exact component={ChefHome} />
+                    <Route path="/chef/about/:chefId" exact component={ChefAbout} />
+                    <Route path="/chef/menu/:chefId" exact component={ChefMenu} />
+                    <Route path="/chef/gallery/:chefId" exact component={ChefGallery} />
                     
                 </Switch>
             </div>

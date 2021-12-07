@@ -2,6 +2,13 @@ const router = require('express').Router();
 const jwt = require("jsonwebtoken");
 const authorize = require("../middleware/authorize");
 const knex = require('knex')(require('../knexfile').development);
+const fs = require('fs');
+
+let requests = fs.readFileSync('./data/request.json');
+requests = JSON.parse(requests);
+
+let foods = fs.readFileSync('./data/book.json');
+foods = JSON.parse(foods);
 
 let chefUsers = [];
 
@@ -12,6 +19,15 @@ knex('chef')
 .catch((err) =>
     console.log('error getting data')
 );
+
+router.get('/foods/:chefId', (req,res) => {
+    const filteresfoods = foods.filter(food => food.chefId === req.params.chefId);
+    res.status(200).json(filteresfoods)
+})
+
+router.get('/requests', (req,res) => {
+    res.status(200).json(requests);
+})
 
 router.get('/current', authorize, (req, res) => {
     // if valid token, continue
@@ -28,6 +44,7 @@ router.get('/current', authorize, (req, res) => {
     // send back full user data 
     return res.json({
         username: foundUser.chefUserName,
+        status:'chef'
     })
 });
 
@@ -73,7 +90,8 @@ router.post('/login', (req, res) => {
 
     res.json({ 
         message: "Successfully logged in",
-        token: token 
+        token: token,
+        id: foundUser.id
     });
 });
 

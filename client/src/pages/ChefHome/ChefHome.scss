@@ -1,0 +1,43 @@
+.chef-home{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'CaveatBrush';
+    margin-top: 2rem;
+    &__request{
+        width: 40vw;
+        height:50rem;
+        background-color: lightgrey;
+        padding-left: 3rem;
+        border-radius: 2rem;
+    }
+    &__book{
+        width: 40vw;
+        height:50rem;
+        background-color: lightgrey;
+        border-radius: 2rem;
+        padding-left: 3rem;
+    }
+    &__request-button{
+        max-height: 2rem;
+        min-width: 8rem;
+        border-radius: 5rem;
+        font-family: 'CaveatBrush';
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        background: linear-gradient(#f4a11c);
+        &:hover{
+            background: #f4a11c;
+        }
+    }
+    &__buttons{
+
+    }
+    &__request-button--reject{
+        margin-left: 2rem;
+    }
+    &__header{
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
