@@ -15,6 +15,7 @@
     }
     &__about{
         min-height: 7.2rem;
+        font-size:1.2rem;
     }
     &__save-button{
         max-height: 2rem;
@@ -34,9 +35,11 @@
         display: flex;
         flex-direction: column;
         width: 45vw;
+        font-family: 'CaveatBrush';
     }
     &__edit-about{
         height:9.6rem;
+        font-family: 'CaveatBrush';
     }
 }
 

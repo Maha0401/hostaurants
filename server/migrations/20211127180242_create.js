@@ -12,7 +12,7 @@ exports.up = function(knex) {
         table.string('chefUserName').notNullable();
         table.string('chefPassword').notNullable();
         table.string('name').notNullable();
-        table.string('about');
+        table.string('about', 10000);
         table.string('pic');
         table.string('pic1');
         table.string('pic2');
@@ -22,7 +22,7 @@ exports.up = function(knex) {
     })
     .createTable('food', (table) => {
         table.increments('id').primary();
-        table.string('name').notNullable();
+        table.string('name', 3000).notNullable();
         table.string('description', 3000);
         table.string('pic');
         table.string('cuisine');

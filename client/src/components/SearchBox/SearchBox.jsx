@@ -1,14 +1,7 @@
 import React from 'react'
 import './SearchBox.scss'
 
-const scrollToSearch = () =>{
-    window.scrollTo({
-        top: 2000,
-        behavior: "smooth" 
-      })
-}
-
-function SearchBox({handleQueryChange, query}) {
+function SearchBox({handleQueryChange, query, scrollToSearch}) {
     return (
         <div className="search">
                 <h2 className="search__header">Search your favorite food </h2>

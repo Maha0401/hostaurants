@@ -15,6 +15,7 @@ class Home extends React.Component {
         query: "",
         foods: [],
         errorLoading: false,
+        noSearch:false
     }
 
     handleQueryChange = (event) => {
@@ -113,6 +114,23 @@ class Home extends React.Component {
         this.props.history.push(`/viewchef/about/${id}`)
     }
 
+    scrollToSearch = () =>{
+          if (!this.state.foods[0]){
+            this.setState({
+                noSearch:true
+            })
+        }
+        if (this.state.foods[0]){
+            this.setState({
+                noSearch:false
+            })
+        }
+        window.scrollTo({
+            top: 2000,
+            behavior: "smooth" 
+          })
+    }
+
     render() {
         const { isLoading, userInfo } = this.state
         return isLoading ? 
@@ -127,12 +145,17 @@ class Home extends React.Component {
                         clickChefHandle={this.clickChefHandle}/>
                     <SearchBox 
                         handleQueryChange= {this.handleQueryChange}
-                        query={this.state.query}/>
+                        query={this.state.query}
+                        scrollToSearch={this.scrollToSearch}/>
                     <RequestButton 
                         requestButtonHandle= {this.requestButtonHandle}/>
+                    {this.state.noSearch? 
+                        <h2 className='noresults'> No results for your search. Click on the request button to enjoy your favorite customized meal. </h2>
+                    :   
                     <FoodList 
                         foods={this.state.foods}
                         foodClickHandle={this.foodClickHandle}/>
+                    }
                 </div>
             )
     }
