@@ -39,25 +39,24 @@ Follow these steps to run a local instance of Ribbon:
    ```shell
    PORT=8080
    JWT_SECRET=<SECRET KEY>
+   DB_HOST=<HOST ADDRESS>
+   DB_USER=<YOUR DB USERNAME>
+   DB_PSWD=<YOUR DB PASSWORD>
    ```
-7. Set 
-   user:<user>
-   password:<password>
-   database:<hostaurants>
  
-8. Start the server:
+7. Start the server:
    ```bash
    $ npx nodemon server.js
    ```
 #### Set up the frontend
-9. Install client dependencies:  
+8. Install client dependencies:  
    
    Run `npm install` from inside the client directory.
    ```bash    
    $ cd ../client
    $ npm install
    ```
-10. Start the React app:
+9. Start the React app:
     ```bash
     $ npm start
     ```
