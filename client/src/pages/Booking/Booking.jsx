@@ -53,6 +53,7 @@ class Booking extends React.Component {
 
     okayModalHandler = () => {
         this.setState({display:''})
+        this.props.history.push('/')
     }
 
     handleInput = value => {
@@ -76,7 +77,6 @@ class Booking extends React.Component {
             }
         )
         .then((res) => {
-            console.log(this.state.inputValue)
             this.setState({display:'booking__popup--show'})
         })    
     }

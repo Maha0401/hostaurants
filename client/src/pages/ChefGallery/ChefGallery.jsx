@@ -59,7 +59,7 @@ class ViewChefGallery extends React.Component {
         <h1>Loading...</h1> 
         :
         (
-            <div>
+            <div className='chef'>
                 <Header username={this.state.chefInfo.username}/>
                 <ChefHeader currentChef={this.state.currentChef}/>
                 <div className='gallery'>
@@ -79,7 +79,8 @@ class ViewChefGallery extends React.Component {
                                 </div>
                                 )}
                         )}
-                    </div>        
+                    </div> 
+                    <input className='gallery__edit-button' type='button' value='Edit Gallery Images'></input>       
                 </div>
             </div>
         )

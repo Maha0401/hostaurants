@@ -12,6 +12,7 @@ import './ChefList.scss'
 class ChefList extends React.Component {
 
     render() {
+        //need to map through the chef in the nearest area using google map api in coming sprints
         return (
             <div className='cheflist'>
             <h2 className='cheflist__header'>Chef near you</h2>

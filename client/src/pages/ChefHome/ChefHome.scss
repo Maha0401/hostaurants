@@ -1,4 +1,5 @@
 .chef-home{
+    
     display: flex;
     justify-content: space-around;
     font-family: 'CaveatBrush';
@@ -40,4 +41,11 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
+}
+
+.chef{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255,255,255,0.800)),url('../../assets/images/bg5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

@@ -52,6 +52,18 @@ router.get('/:id', (req, res) => {
     knex('chef').where('id', req.params.id).then((response) => res.send(response))
 })
 
+router.put('/:id', (req, res) => {
+    const {about} = req.body;
+    knex('chef')
+    .where({ 'id': req.params.id })
+    .update({'about': about })
+    .then((res)=>{
+
+    })
+
+  return res.status(200).send('ok')
+})
+
 router.post('/login', (req, res) => {
     const { username, password } = req.body;
 

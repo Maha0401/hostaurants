@@ -8,6 +8,12 @@ class Request extends React.Component {
     state={
         userInfo: {},
         isLoading: true,
+        display: '',
+    }
+
+    okayModalHandler = () => {
+        this.setState({display:''})
+        this.props.history.push('/')
     }
 
     handleRequestSubmit = (e) => {
@@ -21,10 +27,7 @@ class Request extends React.Component {
             }
         )
         .then((res) => {
-            alert('Request Successful you will be notified if any chef is taking up this request');
-        })
-        .then(()=>{
-            this.props.history.push('/');
+            this.setState({display:'booking__popup--show'})
         })
         .catch((error) => {
             console.log(error);
@@ -60,7 +63,7 @@ class Request extends React.Component {
             <h1>Loading...</h1> 
         :
         (
-            <div>
+            <div className='newrequest'>
                 <Header username={this.state.userInfo.username}/>
                 <form className="requestform" onSubmit={this.handleRequestSubmit}>
                     <div className="requestform__input">
@@ -76,6 +79,12 @@ class Request extends React.Component {
                         <input className="requestform__requestbtn" type='submit' value='Request'></input>
                     </div>
                 </form>
+                <div className={'booking__popup '+this.state.display}>
+                <div className='booking__popup-content'>
+                    <p className='booking__successful'>Request Successful !!!, You will be notified when a chef is ready to take up your request!</p>
+                    <input className='booking__okay-button' onClick={this.okayModalHandler} type='button' value='ok'></input>
+                </div>
+            </div>
             </div>
         )
     }

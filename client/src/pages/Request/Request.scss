@@ -1,3 +1,10 @@
+.newrequest{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255,255,255,0.800)),url('../../assets/images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .requestform{
     &__input{
         display: flex;
@@ -73,4 +80,10 @@
         display: flex;
         justify-content: space-around;
     }
+}
+
+.booking__successful{
+    width: 50vw;
+    text-align: center;
+    margin-left: -20vw;
 }

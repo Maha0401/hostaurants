@@ -1,0 +1,48 @@
+.currentchef{
+    &__edit-button{
+        max-height: 2rem;
+        min-width: 8rem;
+        max-width: 8rem;
+        margin-top: 2rem;
+        border-radius: 5rem;
+        font-family: 'CaveatBrush';
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        background: linear-gradient(#f4a11c);
+        &:hover{
+            background: #f4a11c;
+        }
+    }
+    &__about{
+        min-height: 7.2rem;
+    }
+    &__save-button{
+        max-height: 2rem;
+        min-width: 8rem;
+        max-width: 8rem;
+        margin-top: 2rem;
+        border-radius: 5rem;
+        font-family: 'CaveatBrush';
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        background: linear-gradient(#f4a11c);
+        &:hover{
+            background: #f4a11c;
+        }
+    }
+    &__edit-form{
+        display: flex;
+        flex-direction: column;
+        width: 45vw;
+    }
+    &__edit-about{
+        height:9.6rem;
+    }
+}
+
+.chef{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255,255,255,0.800)),url('../../assets/images/bg5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

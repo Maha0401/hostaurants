@@ -19,5 +19,27 @@
         justify-content: space-around;
         flex-direction: row;
     }
-
+    &__edit-button{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-height: 2rem;
+        width: 17rem;
+        margin-top: 2rem;
+        border-radius: 5rem;
+        font-family: 'CaveatBrush';
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+        background: linear-gradient(#f4a11c);
+        &:hover{
+            background: #f4a11c;
+        }
+    }
+}
+.chef{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255,255,255,0.800)),url('../../assets/images/bg5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

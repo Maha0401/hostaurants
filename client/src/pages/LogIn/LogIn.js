@@ -42,7 +42,7 @@ function LogIn(props) {
                 <div className="login__user">
                     <h1>Log In</h1>
                     <form onSubmit={handleLogIn}>
-                        <Input label="Username" name="username" type="text" />
+                        <Input label="Username" name="username" type="text"/>
                         <Input label="Password" name="password" type="password" />
                         <button className='login__button' type="submit">Log In</button>
                     </form>
@@ -56,7 +56,7 @@ function LogIn(props) {
                     </form>
                 </div>
             </div>
-            <h3 className='login__signup-text'>Dont have an account yet? Please signup...</h3>
+            <h2 className='login__signup-text'>Dont have an account yet? Please signup...</h2>
             <Link className='login__button login__button--signup' to="/signup">Sign Up</Link>
         </div>
     )

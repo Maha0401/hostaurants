@@ -68,7 +68,7 @@ class ChefHome extends React.Component {
             <h1>Loading...</h1> 
         :
             (
-                <div className="dashboard">
+                <div className="">
                     <Header username={chefInfo} />
                     <ChefHeader currentChef={this.state.currentChef} />
                     <div className = 'chef-home'>

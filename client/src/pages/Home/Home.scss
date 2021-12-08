@@ -1,5 +1,9 @@
 .home{
-    margin: 0 8rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255,255,255,0.800)),url('../../assets/images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0 8rem;
     &__search-and-request{
         display: flex;
         justify-content: space-between;

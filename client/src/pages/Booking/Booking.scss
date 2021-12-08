@@ -1,5 +1,8 @@
 .booking{
-    
+    background-image: linear-gradient(rgba(255, 255, 255, 0.800), rgba(255,255,255,0.800)),url('../../assets/images/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     &__popup{
         display:none;
     }
@@ -14,12 +17,16 @@
     }
     &__popup-content{
         position: relative;
-        top:15vw;
+        top:10vw;
         left:45vw;
+
     }
     &__successful{
         font-size: 2rem;
         font-family: 'CaveatBrush';
+        background: #f4a11c;
+        padding: 2rem;
+        margin-right: -2rem;
     }
     &__calender{
         border-radius: 1rem;

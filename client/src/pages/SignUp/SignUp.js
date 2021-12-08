@@ -42,6 +42,8 @@ function SignUp(props) {
                         <Input label="Name" name="name" type="text" />
                         <Input label="Username" name="username" type="text" />
                         <Input label="Password" name="password" type="password" />
+                        <Input label="Confirm Password" name="confirmpassword" type="password" />
+                        <Input label="Email" name="email" type="text" />
                         <button className='signup__button' type="submit">Sign Up!</button>
                     </form>
                 </div>
@@ -51,11 +53,13 @@ function SignUp(props) {
                         <Input label="Name" name="chefName" type="text" />
                         <Input label="Username" name="chefUserName" type="text" />
                         <Input label="Password" name="chefPassword" type="password" />
+                        <Input label="Confirm Password" name="confirmpassword" type="password" />
+                        <Input label="Email" name="email" type="text" />
                         <button className='signup__button' type="submit">Chef Sign Up!</button>
                     </form>
                 </div>
             </div>
-            <h3 className='signup__login-text'>Already have an account? Please login...</h3>
+            <h2 className='signup__login-text'>Already have an account? Please login...</h2>
             <Link className='signup__button signup__button--login' to="/login">Log In</Link>
         </div>
     )

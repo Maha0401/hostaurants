@@ -40,7 +40,7 @@ class ViewChefAbout extends React.Component {
         <h1>Loading...</h1> 
         :
         (
-            <div>
+            <div className='viewchef'>
                 <Header username={this.state.userInfo.username}/>
                 <UserChefHeader currentChef={this.state.currentChef}/>
                 <div className='currentchef'>
