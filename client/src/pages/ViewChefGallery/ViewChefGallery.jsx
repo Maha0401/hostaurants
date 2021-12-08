@@ -62,13 +62,13 @@ class ViewChefGallery extends React.Component {
                 <UserChefHeader currentChef={this.state.currentChef}/>
                 <div className='gallery'>
                     <div className='gallery__row'>
-                        <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic}`} alt={`Gallery posts`}></img>
                         <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic1}`} alt={`Gallery posts`}></img>
                         <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic2}`} alt={`Gallery posts`}></img>
                         <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic3}`} alt={`Gallery posts`}></img>
-                    </div>
-                    <div className='gallery__row'>
                         <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic4}`} alt={`Gallery posts`}></img>
+                    </div>
+                    <div className='gallery__row gallery__row--2'>
+                        
                         {!this.state.foods[0]?<div></div>:
                             this.state.foods.map(food => {
                             return(
