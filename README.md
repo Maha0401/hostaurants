@@ -10,32 +10,54 @@ Thanks for stopping by. 
 ![image](https://user-images.githubusercontent.com/91100108/145144645-6c2e52df-8aba-4ce5-b2d9-81e43b2bf7c7.png)
 
 
-****Installation****
-Follow these steps to run a local instance of Ribbon:
-(You'll need node, npm, and MySQL already installed.)
-1.	Clone or download this repo.
+# Installation
 
-**Set up the backend**
-2.	Create a new database in MySQL called hostaurants.
-3.	Install server dependencies:
-Run npm install from inside the server directory.
-$ cd server
-$ npm install
-4.	Run migrations
-$ npx knex migrate:latest
-5.	Run seeds
-$ npx knex seed:run
-6.	Set environment variables:
-Rename .env_sample to .env and change placeholder values with your own.
-PORT=8080
-JWT_SECRET=<SECRET KEY>
-7.	Start the server:
-$ npx nodemon server.js
+Follow these steps to run a local instance of Ribbon:  
+(You'll need node, npm, and MySQL already installed.)
+
+1. Clone or download this repo.
+#### Set up the backend
+2. Create a new database in MySQL called `ribbon`.
+3. Install server dependencies:  
+   
+   Run `npm install` from inside the server directory.
+   ```bash    
+   $ cd server
+   $ npm install
+   ```
+4. Run migrations
+   ```bash
+   $ npx knex migrate:latest
+   ```
+5. Run seeds
+   ```bash
+   $ npx knex seed:run
+   ```
+6. Set environment variables:  
+   
+   Rename `.env_sample` to `.env` and change placeholder values with your own.
+   ```shell
+   PORT=8080
+   JWT_SECRET=<SECRET KEY>
+   ```
+7. Set 
+   user:<user>
+   password:<password>
+   database:<hostaurants>
  
-**Set up the frontend**
-8.	Install client dependencies:
-Run npm install from inside the client directory.
-$ cd ../client
-$ npm install
-9.	Start the React app:
-$ npm start
+8. Start the server:
+   ```bash
+   $ npx nodemon server.js
+   ```
+#### Set up the frontend
+9. Install client dependencies:  
+   
+   Run `npm install` from inside the client directory.
+   ```bash    
+   $ cd ../client
+   $ npm install
+   ```
+10. Start the React app:
+    ```bash
+    $ npm start
+    ```
