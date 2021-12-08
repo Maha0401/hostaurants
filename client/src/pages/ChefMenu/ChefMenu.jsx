@@ -67,8 +67,8 @@ class ViewChefMenu extends React.Component {
                     this.state.foods.map(food => {
                     return(
                         <div className='chef-foodlist__food' key = {food.id}>
-                            <h2 className='chef-foodlist__header'>{food.name}</h2>
                             <img className='chef-foodlist__image' src={`http://localhost:8080/${food.pic}`} alt={`${food.name} poster`}></img>
+                            <h2 className='chef-foodlist__header'>{food.name}</h2>
                             <input className='chef-foodlist__edit-button' type='button' value='Edit'></input>
                         </div>
                         )}

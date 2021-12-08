@@ -6,8 +6,10 @@
     font-family: 'CaveatBrush';
     margin: 0 4rem 2rem;
     margin-top: 2rem;
+    padding-left: 5rem;
+    flex-direction: row;
     &__header{
-
+        max-width: 12rem;
     }
     &__image{
         width:10rem;
@@ -17,6 +19,9 @@
         box-shadow: .5rem .5rem .25rem #aaaaaa;
     }
     &__food{
+        height: 18rem;
+        padding-top: 2rem;
+        width: 30%;
         cursor: pointer;
         display: flex;
         flex-direction: column;
