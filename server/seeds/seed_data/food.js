@@ -76,7 +76,7 @@ module.exports = [
         name: 'Sheet Pan Thai Sweet Chili – Lime Baked Fish with Garlic Broccolini',
         description: 'Sheet Pan Thai Sweet Chili – Lime Baked Fish with Garlic Broccolini is an easy, healthful flavor-packed meal perfect for a weeknight or date night dinner!',
         pic: '/food/10.jpg',
-        cuisine: 'Mexican',
+        cuisine: 'Thai',
         chefId: '1',
     },
     {
