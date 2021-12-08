@@ -13,6 +13,7 @@ Thanks for stopping by. 
 Follow these steps to run a local instance of Ribbon:
 (You'll need node, npm, and MySQL already installed.)
 1.	Clone or download this repo.
+2.	
 **Set up the backend**
 2.	Create a new database in MySQL called hostaurants.
 3.	Install server dependencies:
@@ -29,6 +30,7 @@ PORT=8080
 JWT_SECRET=<SECRET KEY>
 7.	Start the server:
 $ npx nodemon server.js
+ 
 **Set up the frontend**
 8.	Install client dependencies:
 Run npm install from inside the client directory.
