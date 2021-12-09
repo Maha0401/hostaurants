@@ -13,7 +13,7 @@
     }
     &__image{
         width:10rem;
-        height:10rem;
+        min-height:10rem;
         object-fit: cover;
         border-radius: 1rem;
         box-shadow: .5rem .5rem .25rem #aaaaaa;

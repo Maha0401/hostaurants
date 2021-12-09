@@ -20,7 +20,7 @@ class ChefList extends React.Component {
                 <div className="cheflist__row">
                     <div onClick={() => this.props.clickChefHandle(1)} className="cheflist__chef">
                         <img className='cheflist__image' src={chef1} alt='chef_avatar'></img>
-                        <h4 className='cheflist__name'>Chef Felix</h4>
+                        <h4 className='cheflist__name'>Chef Karthik</h4>
                     </div>
                     <div onClick={() => this.props.clickChefHandle(2)} className="cheflist__chef">
                         <img className='cheflist__image' src={chef2} alt='chef_avatar'></img>
@@ -46,7 +46,7 @@ class ChefList extends React.Component {
                     </div>
                     <div onClick={() => this.props.clickChefHandle(7)} className="cheflist__chef">
                         <img className='cheflist__image' src={chef7} alt='chef_avatar'></img>
-                        <h4 className='cheflist__name'>Chef kamarjit</h4>
+                        <h4 className='cheflist__name'>Chef Felix</h4>
                     </div>
                     <div onClick={() => this.props.clickChefHandle(8)} className="cheflist__chef">
                         <img className='cheflist__image' src={chef8} alt='chef_avatar'></img>

@@ -69,16 +69,6 @@ class ViewChefGallery extends React.Component {
                         <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic3}`} alt={`Gallery posts`}></img>
                         <img className='gallery__image' src={`http://localhost:8080/${this.state.currentChef.pic4}`} alt={`Gallery posts`}></img>
                     </div>
-                    <div className='gallery__row gallery__row--2'>
-                        {!this.state.foods[0]?<div></div>:
-                            this.state.foods.map(food => {
-                            return(
-                                <div onClick={() => this.props.foodClickHandle(food.id,food.chefId)} className='chef-foodlist__food' key = {food.id}>
-                                    <img className='gallery__image' src={`http://localhost:8080/${food.pic}`} alt={`${food.name} poster`}></img>
-                                </div>
-                                )}
-                        )}
-                    </div> 
                     <input className='gallery__edit-button' type='button' value='Edit Gallery Images'></input>       
                 </div>
             </div>

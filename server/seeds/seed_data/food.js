@@ -1,11 +1,19 @@
 module.exports = [
     {
+        id: 12,
+        name: 'Lentil Salad',
+        description: 'French Lentil Salad is a lovely and delicious way to ring in spring!  With radishes, young green beans and baby lettuces, it’s perfect for that first dinner on the patio!',
+        pic: '/food/12.jpg',
+        cuisine: 'French',
+        chefId: '4',
+    },
+    {
         id: 1,
         name: 'Fish and Chips',
         description: 'Fish and chips is a popular hot dish consisting of fried fish in crispy batter, served with chips. The dish originated in England, where these two components had been introduced from separate immigrant cultures; it is not known who created the culinary fusion that became the emblematic British meal.',
         pic: '/food/1.jpg',
         cuisine: 'British',
-        chefId: '6',
+        chefId: '4',
     },
     {
         id: 2,
@@ -37,7 +45,7 @@ module.exports = [
         description: 'Italian Sausage and Bell Pepper Polenta Bake is a heartier, make-ahead gluten-free twist on pizza with the classic combination of Italian sausage and peppers.  It’s perfect cool-weather comfort food!',
         pic: '/food/5.jpg',
         cuisine: 'Italian',
-        chefId: '4',
+        chefId: '6',
     },
     {
         id: 6,
@@ -86,6 +94,46 @@ module.exports = [
         pic: '/food/11.jpg',
         cuisine: 'Mexican',
         chefId: '1',
+    },
+    {
+        id: 13,
+        name: 'Classic Ratatouille',
+        description: 'This lovely Provencal-inspired Classic French Ratatouille has all the summer veggie goodness going on with eggplant, zucchini, yellow squash and sweet bell peppers simmered to perfection in a lively tomato sauce.',
+        pic: '/food/13.jpeg',
+        cuisine: 'French',
+        chefId: '4',
+    },
+    {
+        id: 14,
+        name: 'French-Style Potato Salad',
+        description: 'French-Style Potato Salad is sure to add a touch of elegance to your next get-together!  Served warm, with lots of fresh herbs and a lively vinaigrette, it’s a refreshing change from the typical potato salad.  The secret to getting the flavor started is to splash the warm potatoes with chicken stock and wine!  Do I have your attention?',
+        pic: '/food/14.jpg',
+        cuisine: 'French',
+        chefId: '2',
+    },
+    {
+        id: 15,
+        name: 'French Onion Soup',
+        description: 'French Onion Soup is a classic that’s always in season!  This version is scaled perfectly for a lovely dinner for two!',
+        pic: '/food/15.jpg',
+        cuisine: 'French',
+        chefId: '2',
+    },
+    {
+        id: 16,
+        name: 'Chicken with 40 Cloves of Garlic',
+        description: 'Chicken with 40 Cloves of Garlic is a classic French country dish that’s perfect for a weeknight dinner or your most elegant dinner party.  Paired with budget-friendly chicken thighs, all that garlic mellows into buttery goodness for a dish you’ll fall in love with!',
+        pic: '/food/16.jpg',
+        cuisine: 'French',
+        chefId: '6',
+    },
+    {
+        id: 17,
+        name: 'Butternut Squash Leek and Gruyere Tart',
+        description: 'Butternut Squash Leek and Gruyere Tart is a lovely French-inspired midwinter meal perfect for lunch, brunch or light supper.',
+        pic: '/food/17.jpg',
+        cuisine: 'French',
+        chefId: '6',
     },
 
   ];

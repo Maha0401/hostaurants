@@ -1,20 +1,3 @@
 [
-  {
-    "id": "3d6b16c3-47a4-4fa2-9ad6-70073c42b24d",
-    "foodId": "6",
-    "foodName": "Italian Beef and Farro Stuffed Peppers",
-    "chefId": "4",
-    "date": "Thu Dec 09 2021",
-    "message": "I loved this recipe you made last time. I am booking it again",
-    "clientName": "foodie"
-  },
-  {
-    "id": "73028e96-768c-46e6-b039-0f6f28d09886",
-    "foodId": "7",
-    "foodName": "Mediterranean Fish en Papillote",
-    "chefId": "6",
-    "date": "Thu Dec 09 2021",
-    "message": "",
-    "clientName": "foodie"
-  }
+  
 ]
